@@ -109,9 +109,9 @@ else:
     print ("Weight in  kilos is " + str(converted))
     
     
- #####################################
- #####################################
- #####################################
+#####################################
+#####################################
+#####################################
   
 
 import numpy as np
@@ -241,5 +241,59 @@ for i in range (c):
 #####################################
 #####################################
 
+# Finding Eigen Values of given matrix
+ for 2x2 matrix
+ 
+ import numpy as np 
 
-  
+a = [[2,3],[44,15]]
+print("Eigen values")
+print(np.linalg.eigvals(a)) #for calculating eigen values
+print(" ")
+print("Eigen vectors")
+print(np.linalg.eigh(a)) #for calculating eigen vectors
+
+
+
+for 3x3 matrix
+import numpy as np 
+
+a = [[2,3,2],[44,15,3],[4,77,29]]
+print("Eigen values")
+print(np.linalg.eigvals(a)) #for calculating eigen values
+print("")
+print("Eigen vectors")
+print(np.linalg.eigh(a)) #for calculating eigen vectors
+
+
+#####################################
+#####################################
+#####################################
+
+
+Matrix operations:
+x = [[1,2,2],[7,7,7],[100,100,100]]
+y = [[1,2,2],[7,7,7],[100,100,1]]
+
+add = [[x[i][j] + y[i][j] for j in range(len(x))] for i in range (len(x))]
+print("Addition")
+print(add)
+print("")
+
+sub = [[x[i][j] - y[i][j] for j in range(len(x))] for i in range (len(x))]
+print("Subtraction")
+print(sub)
+print("")
+
+mul = [[x[i][j] * y[i][j] for j in range(len(x))] for i in range (len(x))]
+print("Multiplication")
+print(mul)
+print("")
+
+div = [[x[i][j] / y[i][j] for j in range(len(x))] for i in range (len(x))]
+print("Division")
+print(div)
+
+#####################################
+#####################################
+#####################################
