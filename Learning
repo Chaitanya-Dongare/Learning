@@ -1,0 +1,245 @@
+#simple print function
+name = "chai"
+age = 21
+work = "intern"
+print(name,age,work)
+
+#####################################
+
+#taking input 
+name = input("What is your name? ")
+print("Hello "+ name)
+
+#####################################
+
+#calculation
+birth_year = input("What year is your birth year? ")
+age = 2022 - int(birth_year)
+
+print("your age is "+ str(age))
+
+#####################################
+
+first_no = input("enter first number: ")
+second_number = input("enter second number: ")
+sum = first_no +  second_number
+print("The sum of the two nos is: "+sum) #wrong code as values as string values, simply added|attached
+
+#####################################
+
+# Operations after input
+first = input("enter first number: ")
+second = input("enter second number: ")
+sum = int(first) + int(second)
+print("The sum of the two nos is: "+ str(sum)) #here we convert integral value to string value as they both are different
+
+#####################################
+
+first = input("First: ")
+second = input("Second: ")
+sum = int(first)+int(second)
+print(sum) 
+
+#####################################
+
+first = input("First: ")
+second = input("Second: ")
+sum = float(first)+float(second)
+print(sum) #We need to have seperate "float" if the given data is in decimals
+
+#####################################
+
+first = float(input("First: "))
+second = float(input("Second: "))
+sum = first + second
+print("sum is " + str(sum))
+
+#####################################
+
+#Using strings in python:
+
+course = "Python for beginners" #finding a certain character in a string
+print(course.find('y'))
+print(course.find('begr'))
+
+course = "Python for beginners" #replacing a certain character in a string
+
+print(course.replace('for',"4"))
+
+
+#####################################
+
+#Arithmetic operations in python
+
+print(900**3) #exponent
+print(765/4)  #regular division
+print(765//4) #intregral value after division
+print(5699%6) #reminder after division 
+
+#####################################
+#checking True/false:
+
+print(3!=2
+     )
+
+##################################### 
+
+Weight Calculator:
+ 
+weight = float(input("Weight? "))
+kilo_lb = float(input("Kilos(K) or Lbs(l) "))
+if str(kilo_lb) == 'k' or 'K':
+    print(int(weight))
+elif str(kilo_lb) == 'l' or 'L':
+    kiklo_lbs = kilo_lb * 2.2
+    print(int(kilo_lbs))
+else:
+    print("type k or l")
+    
+    
+#####################################    
+    
+weight = float(input("Weight? "))
+unit = (input("(K)ilos) or (L)bs? "))
+if unit.upper == "K":
+    converted = weight * 0.45
+    print ("Weight in lbs is " + str(converted))
+else:
+    converted = weight / 0.45
+    print ("Weight in  kilos is " + str(converted))
+    
+    
+ #####################################
+ #####################################
+ #####################################
+  
+
+import numpy as np
+  
+# Ways of creating numpys
+  
+#**1. Using zeros and ones
+  
+ a = np.zeros(3)
+a
+
+#####################################
+
+
+z = np.zeros(7)
+z.shape = (7,1)
+z
+
+#####################################
+
+o = np.ones(3)
+o.shape=(3,1)
+o
+
+#####################################
+
+#**2. Using Linespacing (equal intervals between two nos)**
+
+  z = np.linspace(4,100,8)
+z.shape=(8,1)
+z
+
+
+#####################################
+
+
+#**3. Using list/arrays
+
+z = np.array([10,32,62,77,100])
+z
+
+z.shape = (5,1)
+z
+  
+z = np.array([[2,5,7,99,73,666,444]])
+z
+  
+#####################################  
+#####################################
+#####################################
+
+
+import numpy as np
+import pandas as pd
+
+
+dict1 = {
+    "name": ["chai", "ayush" ,"gayatri","ishaan"],
+    "marks":[92, 35,77,100],
+    "city": ["nagpur", "delhi", "buldhana","mumbai"]
+}
+#creating a dictionary/data sheet (code)
+
+
+#####################################
+
+
+df = pd.DataFrame(dict1) #creating a data framework using pandas
+df
+
+
+#####################################
+
+
+df.to_csv("friends_csv") #making an excel file of the given data, csv simply means comma seperated values
+
+df.to_csv("friends_csv", index = False ) #removing the 0,1,2,3... index from data
+
+df.head(2) #shows the no of rows we want to see,from the top
+
+df.tail(2) #shows the no of rows from the bottom
+
+df.describe() #calculates numerical data of he numerical coloumns
+
+
+#####################################  
+#####################################
+#####################################
+
+
+#Inverse matrix code
+M = np.array([[1,12,3],[22,33,66],[98,77,67]])
+M
+Minv = np.linalg.inv(M)
+Minv
+
+
+#Inverse Check
+np.matmul(M,Minv)
+
+
+#####################################
+
+#TRANSPOSE
+
+r = int(input("Input the number of rows:"))
+c = int(input("Input the number of coloumns:"))
+print("enter the values of matrix:");
+matrix1 = [[int(input()) for i in range (c)] for j in range (r)]
+print ("Matrix:")
+for i in range (r):
+    for j in range (c):
+        print(format(matrix1[i][j],"<4"),end=" ")
+    
+    print()
+    
+result = [[0 for i in range (r)] for j in range (c)]
+print ("Transpose:")
+for i in range (c):
+    for j in range(r):
+        result [i][j] = matrix1[j][i]
+        print(format(result[i][j],"<4"),end=" ")
+        
+    print()
+        
+#####################################
+#####################################
+#####################################
+
+
+  
